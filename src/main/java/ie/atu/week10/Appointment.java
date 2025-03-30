@@ -10,7 +10,7 @@ public class Appointment {
     //Constructor
     public Appointment(int patientID, int doctorDr, Date appointmentDate) {
         this.patientID = patientID;
-        this.doctorID = doctorDr;
+        this.doctorDr = doctorDr;
         this.appointmentDate = appointmentDate;
     }
 
@@ -23,7 +23,7 @@ public class Appointment {
 
     //display appointment details
     public void displayAppointment() {
-        System.out.println("Patient ID: " + patientID + ", Doctor ID: " + doctorDr + ", Date: " + appointmentDate);
+        System.out.println("Date: " + appointmentDate + ", Patient ID: " + patientID + ", Doctor ID: " + doctorDr);
     }
 }
 

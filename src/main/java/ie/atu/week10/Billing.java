@@ -24,8 +24,6 @@ public class Billing {
     public String getPaymentStatus() { return paymentStatus; }
     public void setPaymentStatus(String paymentStatus) { this.paymentStatus = paymentStatus; }
 
-    public Date getDate() { return date; }
-
     // Method to display bill details
     public void displayBill() {
         System.out.println("Bill ID: " + billID + ", Patient ID: " + patientID +
