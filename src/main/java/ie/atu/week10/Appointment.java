@@ -4,26 +4,26 @@ import java.util.Date;
 
 public class Appointment {
     private int patientID;
-    private int doctorID;
+    private int doctorDr;
     private Date appointmentDate;
 
     //Constructor
-    public Appointment(int patientID, int doctorID, Date appointmentDate) {
+    public Appointment(int patientID, int doctorDr, Date appointmentDate) {
         this.patientID = patientID;
-        this.doctorID = doctorID;
+        this.doctorID = doctorDr;
         this.appointmentDate = appointmentDate;
     }
 
     // Getters+Setters
     public int getPatientID() { return patientID; }
-    public int getDoctorID() { return doctorID; }
+    public int getDoctorID() { return doctorDr; }
 
     public Date getAppointmentDate() { return appointmentDate; }
     public void setAppointmentDate(Date appointmentDate) { this.appointmentDate = appointmentDate; }
 
     //display appointment details
     public void displayAppointment() {
-        System.out.println("Patient ID: " + patientID + ", Doctor ID: " + doctorID + ", Date: " + appointmentDate);
+        System.out.println("Patient ID: " + patientID + ", Doctor ID: " + doctorDr + ", Date: " + appointmentDate);
     }
 }
 
