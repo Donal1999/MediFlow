@@ -1,17 +1,39 @@
 package ie.atu.week10;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import java.util.Date;
+
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        // Create a patient
+        Patient patient = new Patient(1, "Sean Sheehan", 34, "Male", "087 906 2587");
+        patient.displayPatient();
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
+        // Create a doctor
+        Doctor doctor = new Doctor(101, "Mary Daly", "Neurology",  "087 906 2587");
+        doctor.displayDoctor();
+
+        // Schedule an appointment
+        Appointment appointment = new Appointment(patient.getPatientID(), doctor.getDoctorID(), new Date());
+        appointment.displayAppointment();
+
+        // Create a bill
+        Billing bill = new Billing(1001, patient.getPatientID(), 250.00, "Unpaid");
+        bill.displayBill();
+
+        // Create a user
+        User user = new User(5001, "reception1", "pass123", "Receptionist");
+        user.displayUser();
+
+        // Simulate a basic login check
+        String inputUsername = "reception1";
+        String inputPassword = "pass123";
+
+        System.out.println("\n--- Login Attempt ---");
+        if (inputUsername.equals(user.getUsername()) && inputPassword.equals(user.getPassword())) {
+            System.out.println("Login successful! Welcome " + user.getRole());
+        } else {
+            System.out.println("Login failed. Invalid credentials.");
         }
     }
 }
+
