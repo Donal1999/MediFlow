@@ -1,5 +1,4 @@
-package ie.atu.week10;
-
+import ie.atu.week10.Patient;
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 

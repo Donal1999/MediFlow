@@ -1,5 +1,4 @@
-package ie.atu.week10;
-
+import ie.atu.week10.Billing;
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 
