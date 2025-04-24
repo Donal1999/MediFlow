@@ -1,27 +1,37 @@
-package ie.atu.week10;
+import ie.atu.week10.Doctor;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class doctorTest {
-    public static void main(String[] args) {
-        // Create a Doctor object
-        Doctor doc = new Doctor(1, "Dr. Acton", "Cardiology", "123-456-7890");
+    public class doctorTest {
+        @Test
+        void testDoctorConstructorAndGetters() {
+            Doctor doctor = new Doctor(101, "Dr. Jane Rooney", "Cardiology", "1234567890");
+            assertEquals(101, doctor.getDoctorID());
+            assertEquals("Dr. Jane Rooney", doctor.getName());
+            assertEquals("Cardiology", doctor.getSpecialization());
+            assertEquals("1234567890", doctor.getContactNumber());
+        }
 
-        // Display the doctor's information
-        doc.displayDoctor();
+        @Test
+        void testSetName() {
+            Doctor doctor = new Doctor(102, "Dr. Smith", "Neurology", "0987654321");
+            doctor.setName("Dr. Emily Smith");
+            assertEquals("Dr. Emily Smith", doctor.getName());
+        }
 
-        // Test getters
-        System.out.println("Testing Getters:");
-        System.out.println("ID: " + doc.getDoctorID());
-        System.out.println("Name: " + doc.getName());
-        System.out.println("Specialization: " + doc.getSpecialization());
-        System.out.println("Contact: " + doc.getContactNumber());
+        @Test
+        void testSetSpecialization() {
+            Doctor doctor = new Doctor(103, "Dr. Khan", "General", "1122334455");
+            doctor.setSpecialization("Pediatrics");
+            assertEquals("Pediatrics", doctor.getSpecialization());
+        }
 
-        // Test setters
-        doc.setName("Dr. Tommy Acton");
-        doc.setSpecialization("Neurology");
-        doc.setContactNumber("987-654-3210");
-
-        // Display updated info
-        System.out.println("\nAfter Updates:");
-        doc.displayDoctor();
+        @Test
+        void testSetContactNumber() {
+            Doctor doctor = new Doctor(104, "Dr. Lynch", "Orthopedics", "5566778899");
+            doctor.setContactNumber("6677889900");
+            assertEquals("6677889900", doctor.getContactNumber());
+        }
     }
-}
+
+
