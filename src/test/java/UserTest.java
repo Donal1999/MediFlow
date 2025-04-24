@@ -2,7 +2,7 @@ import ie.atu.week10.User;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class userTest {
+public class UserTest {
     @Test
     void testUserConstructorAndGetters() {
         User user = new User(1, "Anna_Pierce", "password123", "Doctor");
@@ -33,3 +33,4 @@ public class userTest {
         assertEquals("Admin", user.getRole());
     }
 }
+

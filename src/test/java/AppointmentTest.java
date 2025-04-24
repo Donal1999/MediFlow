@@ -1,5 +1,4 @@
-package ie.atu.week10;
-
+import ie.atu.week10.Appointment;
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 import java.util.Date;
