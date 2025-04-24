@@ -1,9 +1,15 @@
 package ie.atu.week10;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 import java.util.Date;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws SQLException {
+        // Connection to database
+        Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/hostpitalManagement", "root", "password");
+
         // Create a patient
         Patient patient = new Patient(1, "Sean Sheehan", 34, "Male", "087 906 2587");
         patient.displayPatient();
