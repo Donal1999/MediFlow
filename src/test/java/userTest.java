@@ -1,20 +1,35 @@
-package ie.atu.week10;
+import ie.atu.week10.User;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class userTest {
-    public static void main(String[] args) {
-        // Create a sample user (e.g., already "registered")
-        User user = new User(101, "adminUser", "pass123", "Admin");
+    @Test
+    void testUserConstructorAndGetters() {
+        User user = new User(1, "Anna_Pierce", "password123", "Doctor");
+        assertEquals(1, user.getUserID());
+        assertEquals("Anna_Pierce", user.getUsername());
+        assertEquals("password123", user.getPassword());
+        assertEquals("Doctor", user.getRole());
+    }
 
-        // Simulate login credentials entered by someone
-        String enteredUsername = "adminUser";
-        String enteredPassword = "pass123";
+    @Test
+    void testSetUsername() {
+        User user = new User(2, "Sean_Burke", "apples456", "Receptionist");
+        user.setUsername("new_username");
+        assertEquals("new_username", user.getUsername());
+    }
 
-        // Authentication logic
-        if (enteredUsername.equals(user.getUsername()) && enteredPassword.equals(user.getPassword())) {
-            System.out.println("Login successful!");
-            user.displayUser(); // Optional: show user info
-        } else {
-            System.out.println("Login failed! Invalid username or password.");
-        }
+    @Test
+    void testSetPassword() {
+        User user = new User(3, "Mary_Ronan", "mary1999", "Admin");
+        user.setPassword("newPassword123");
+        assertEquals("newPassword123", user.getPassword());
+    }
+
+    @Test
+    void testSetRole() {
+        User user = new User(4, "Colm_Roche", "pass", "Doctor");
+        user.setRole("Admin");
+        assertEquals("Admin", user.getRole());
     }
 }
