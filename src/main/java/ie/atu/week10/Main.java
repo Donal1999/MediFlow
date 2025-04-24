@@ -8,7 +8,7 @@ import java.util.Date;
 public class Main {
     public static void main(String[] args) throws SQLException {
         // Connection to database
-        Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/hostpitalManagement", "root", "password");
+        Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/mediflow", "root", "password");
 
         // Create a patient
         Patient patient = new Patient(1, "Sean Sheehan", 34, "Male", "087 906 2587");
