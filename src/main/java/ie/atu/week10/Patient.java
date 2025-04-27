@@ -7,7 +7,7 @@ public class Patient {
     private String contactNumber;
 
     //Constructor
-    public Patient(int patientID, String name, int age, String gender, String contactNumber) {
+    public Patient(int patientID, String name, int age, String contactNumber) {
         this.patientID = patientID;
         this.name = name;
         this.age = age;

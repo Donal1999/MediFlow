@@ -6,7 +6,7 @@ public class PatientTest {
 
     @Test
     public void testPatientCreation() {
-        Patient patient = new Patient(1, "Sean Sheehan", 34, "Male", "087 906 2587");
+        Patient patient = new Patient(1, "Sean Sheehan", 34, "087 906 2587");
         assertEquals(1, patient.getPatientID());
         assertEquals("Sean Sheehan", patient.getName());
         assertEquals(34, patient.getAge());
@@ -15,7 +15,7 @@ public class PatientTest {
 
     @Test
     public void testPatientSetters() {
-        Patient patient = new Patient(1, "Sean Sheehan", 34, "Male", "087 906 2587");
+        Patient patient = new Patient(1, "Sean Sheehan", 34, "087 906 2587");
         patient.setName("John Doe");
         patient.setAge(35);
         patient.setContactNumber("089 123 4567");

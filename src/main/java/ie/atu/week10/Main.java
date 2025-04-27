@@ -11,7 +11,7 @@ public class Main {
         Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/mediflow", "root", "password");
 
         // Create a patient
-        Patient patient = new Patient(1, "Sean Sheehan", 34, "Male", "087 906 2587");
+        Patient patient = new Patient(1, "Sean Sheehan", 34, "087 906 2587");
         patient.displayPatient();
 
         // Create a doctor
