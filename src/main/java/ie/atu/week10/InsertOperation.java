@@ -2,16 +2,15 @@ package ie.atu.week10;
 
 import java.sql.*;
 
-
 public class InsertOperation {
     public static void main(String[] args) throws SQLException {
 
-        Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "password");
+        Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/mediflow", "root", "password");
 
         try {
             conn.setAutoCommit(false);
 
-            PreparedStatement stmt = conn.prepareStatement("INSERT INTO patients (patientID, name, age, contactNumber) VALUES ?, ?");
+            PreparedStatement stmt = conn.prepareStatement("INSERT INTO patients (patientID, name, age, contactNumber) VALUES ?, ?, ?, ?");
             stmt.setInt(1, 101);
             stmt.setString(2, "John Doe");
             stmt.setInt(3, 45);
