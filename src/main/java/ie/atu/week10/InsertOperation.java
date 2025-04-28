@@ -10,11 +10,12 @@ public class InsertOperation {
         try {
             conn.setAutoCommit(false);
 
-            PreparedStatement stmt = conn.prepareStatement("INSERT INTO patients (patientID, name, age, contactNumber) VALUES ?, ?, ?, ?");
+            PreparedStatement stmt = conn.prepareStatement("INSERT INTO patient (id, name, age, diagnosis, contactNmuber) VALUES (?, ?, ?, ?, ?)");
             stmt.setInt(1, 101);
             stmt.setString(2, "John Doe");
             stmt.setInt(3, 45);
-            stmt.setString(4, "089 123 4567");
+            stmt.setString(4, "Cancer");
+            stmt.setString(5, "089 123 4567");
             stmt.executeUpdate();
 
             conn.commit();
