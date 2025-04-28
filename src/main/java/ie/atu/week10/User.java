@@ -1,5 +1,7 @@
 package ie.atu.week10;
 
+import java.util.Scanner;
+
 public class User {
     private int userID;
     private String username;
@@ -29,4 +31,7 @@ public class User {
     public void displayUser() {
         System.out.println("User ID: " + userID + ", Username: " + username + ", Role: " + role);
     }
+
+
+
 }
