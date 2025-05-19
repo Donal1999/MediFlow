@@ -16,9 +16,8 @@ public class Main {
              String password = sc.nextLine();
 
              logging.checkUser(username, password);
-
-
          }
+
 
 
 
