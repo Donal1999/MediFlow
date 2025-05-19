@@ -8,7 +8,7 @@ public class SelectOperation {
         String username = "root";
         String password = "password";
 
-        String selectSQL = "SELECT id, name, age, diagnosis, contactNumber FROM patients";
+        String selectSQL = "SELECT id, name, age, diagnosis, contactNmuber FROM patient";
 
         try (Connection connection = DriverManager.getConnection(url, username, password);
              Statement statement = connection.createStatement();
@@ -19,7 +19,7 @@ public class SelectOperation {
                 String name = resultSet.getString("name");
                 int age = resultSet.getInt("age");
                 String diagnosis = resultSet.getString("diagnosis");
-                String contactNumber = resultSet.getString("contactNumber");
+                String contactNumber = resultSet.getString("contactNmuber");
 
                 System.out.println("Patient ID: " + patientID +
                         ", Name: " + name +
